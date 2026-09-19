@@ -6,9 +6,8 @@ The pipeline gets sales data from the DummyJSON API, transforms the data, and st
 
 ### Pipeline
 
-```text
+
 API → Extract → Transform → sales_raw → sales_curated → Validate
-```
 
 ### Tools
 
@@ -28,8 +27,8 @@ Stores the cleaned data with duplicate records removed.
 
 ### Airflow Tasks
 
-* `extract_from_api`
-* `transform_data`
-* `load_to_raw`
-* `create_curated`
-* `validate_data`
+* extract_from_api
+* transform_data
+* load_to_raw
+* create_curated
+* validate_data
