@@ -7,7 +7,7 @@ The pipeline gets sales data from the DummyJSON API, transforms the data, and st
 ### Pipeline
 
 
-API → Extract → Transform → sales_raw → sales_curated → Validate
+API -> Extract -> Transform -> sales_raw -> sales_curated -> Validate
 
 ### Tools
 
