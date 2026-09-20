@@ -2,7 +2,6 @@
 
 An end-to-end data engineering pipeline that extracts sales data from a REST API, transforms nested JSON data, loads it into PostgreSQL, removes duplicates, and validates the data using Apache Airflow.
 
----
 
 ## Project Overview
 
@@ -10,7 +9,6 @@ This project simulates a real-world ETL pipeline where data is collected from an
 
 The pipeline is orchestrated using Apache Airflow.
 
----
 
 ## Architecture
 
@@ -18,7 +16,6 @@ The pipeline is orchestrated using Apache Airflow.
 DummyJSON API -> Extract -> Transform -> sales_raw -> Deduplication -> sales_curated -> Validation
 ```
 
----
 
 ## Technologies
 
@@ -31,7 +28,6 @@ DummyJSON API -> Extract -> Transform -> sales_raw -> Deduplication -> sales_cur
 - Docker
 - Astro CLI
 
----
 
 ## Data Source
 
@@ -147,34 +143,6 @@ Workflow:
 extract_from_api -> transform_data -> load_to_raw -> create_curated -> validate_data
 ```
 
----
-
-## Database Schema
-
-### sales_raw
-
-| Column | Type |
-|----------|----------|
-| cart_id | INTEGER |
-| product_id | INTEGER |
-| title | VARCHAR |
-| price | NUMERIC |
-| quantity | INTEGER |
-| total | NUMERIC |
-| ingested_at | TIMESTAMPTZ |
-
-### sales_curated
-
-| Column | Type |
-|----------|----------|
-| cart_id | INTEGER |
-| product_id | INTEGER |
-| title | VARCHAR |
-| price | NUMERIC |
-| quantity | INTEGER |
-| total | NUMERIC |
-
----
 
 ## Example Analysis
 
@@ -201,25 +169,7 @@ Rolex Datejust              76999.93
 MotoGP CI.H1                59999.96
 ```
 
----
 
-## Project Structure
-
-```text
-sales-data-pipeline/
-│
-├── dags/
-│   └── api_to_postgres.py
-│
-├── sql/
-│   └── analytics.sql
-│
-├── README.md
-│
-├── requirements.txt
-│
-└── .gitignore
-```
 
 ---
 
@@ -258,7 +208,6 @@ Trigger:
 api_to_postgres
 ```
 
----
 
 ## Data Quality Features
 
@@ -270,7 +219,6 @@ api_to_postgres
 - Validation checks
 - Raw / Curated separation
 
----
 
 ## Future Improvements
 
@@ -281,20 +229,3 @@ api_to_postgres
 - Analytics layer
 - Dashboard integration
 - Monitoring
-
----
-
-## Author
-
-**Ayman Kasmou**
-
-Bachelor's in Statistics and Computer Science
-
-Interested in:
-
-- Data Engineering
-- Data Analytics
-- Databases
-- Python
-- SQL
-- Cloud Data Platforms
