@@ -15,25 +15,7 @@ The pipeline is orchestrated using Apache Airflow.
 ## Architecture
 
 ```text
-DummyJSON API
-      |
-      v
-   Extract
-      |
-      v
-  Transform
-      |
-      v
-   sales_raw
-      |
-      v
- Deduplication
-      |
-      v
- sales_curated
-      |
-      v
-  Validation
+DummyJSON API -> Extract -> Transform -> sales_raw -> Deduplication -> sales_curated -> Validation
 ```
 
 ---
