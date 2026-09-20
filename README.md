@@ -113,21 +113,7 @@ api_to_postgres
 
 The workflow contains four main tasks:
 
-extract_from_api
-        |
-        v
-transform_data
-        |
-        v
-load_to_raw
-        |
-        v
-create_curated
-        |
-        v
-validate_data
-Database Structure
-sales_raw
+extract_from_api -> transform_data -> load_to_raw -> create_curatedvalidate_data -> Database Structure -> sales_raw
 
 Stores the transformed API data before deduplication.
 
